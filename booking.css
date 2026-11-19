@@ -1,0 +1,151 @@
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+    border-bottom: 1px solid #383838;
+}
+
+.booking-logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.booking-logo span {
+    color: #c9a66b;
+}
+
+.booking-logo small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+    color: #aaa;
+}
+
+.back-link {
+    color: #c9a66b;
+    text-decoration: none;
+}
+
+.booking-page {
+    max-width: 750px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+.booking-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.booking-heading span {
+    color: #c9a66b;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.booking-heading h1 {
+    color: #fff;
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.booking-heading h1 em {
+    color: #c9a66b;
+    font-family: Georgia, serif;
+}
+
+.booking-heading p {
+    color: #aaa;
+}
+
+.booking-form {
+    background: #242424;
+    padding: 35px;
+    border: 1px solid #414141;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    flex: 1;
+}
+
+.form-group label {
+    color: #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: #191919;
+    border: 1px solid #444;
+    color: #fff;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #c9a66b;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    background: #c9a66b;
+    color: #171717;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #e0bd83;
+}
+
+.form-note {
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    .booking-heading h1 {
+        font-size: 30px;
+    }
+
+    .booking-form {
+        padding: 22px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

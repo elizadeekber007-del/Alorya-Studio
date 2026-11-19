@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | ALORYA STUDIO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CAMERA INTRO -->
+    <div id="introAnimation">
+        <div class="camera-animation">
+            <svg viewBox="0 0 100 75" width="100" height="75">
+                <path d="M10 18 H28 L36 7 H65 L73 18 H90 Q96 18 96 25 V65 Q96 70 90 70 H10 Q4 70 4 65 V25 Q4 18 10 18Z"
+                    fill="#c9a66b" />
+                <circle cx="50" cy="44" r="21" fill="#171717" />
+                <circle cx="50" cy="44" r="14" fill="#c9a66b" />
+                <circle cx="50" cy="44" r="8" fill="#171717" />
+                <circle cx="80" cy="27" r="4" fill="#171717" />
+            </svg>
+        </div>
+        <span>ALORYA STUDIO</span>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="index.html#home" class="logo">
+                ALORYA<span>.</span>
+                <small>PHOTOGRAPHY STUDIO</small>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html#home"><b>Ana səhifə</b></a>
+                <a href="portfolio.html"><b>Portfolio</b></a>
+                <a href="services.html"><b>Xidmətlər</b></a>
+                <a href="index.html#about"><b>Haqqımızda</b></a>
+                <a href="index.html#contact"><b>Əlaqə</b></a>
+            </nav>
+
+            <a href="booking.html" class="header-btn">
+                Çəkiliş sifariş et ↗
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio section" id="portfolio">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-number">01 / SELECTED WORKS</span>
+                    <h2>Our Portfolio<span>.</span></h2>
+                </div>
+
+                <p>
+                    Hər kadr bir hekayə, hər şəkil bir xatirədir.
+                </p>
+
+            </div>
+
+
+            <!-- FILTER BUTTONS -->
+            <div class="portfolio-filters">
+
+                <button class="filter-btn active" data-filter="all">
+                    Hamısı
+                </button>
+
+                <button class="filter-btn" data-filter="birthday">
+                    Ad günü
+                </button>
+
+                <button class="filter-btn" data-filter="engagement">
+                    Nişan
+                </button>
+
+                <button class="filter-btn" data-filter="family">
+                    Ailə
+                </button>
+
+                <button class="filter-btn" data-filter="graduation">
+                    Vinetka
+                </button>
+
+            </div>
+
+
+            <!-- DYNAMIC GALLERY -->
+            <div class="gallery" id="gallery"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+
+        <button class="lightbox-close" id="lightboxClose">
+            &times;
+        </button>
+
+        <button class="lightbox-prev" id="lightboxPrev">
+            &#10094;
+        </button>
+
+        <div class="lightbox-content">
+
+            <img src="" alt="Portfolio image" id="lightboxImage">
+
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <span id="lightboxCounter"></span>
+            </div>
+
+        </div>
+
+        <button class="lightbox-next" id="lightboxNext">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+                <div>
+                    <a href="index.html#home" class="logo footer-logo">
+                        ALORYA<span>.</span>
+                    </a>
+
+                    <p>Timeless memories. Beautiful stories.</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>CONTACT</h4>
+
+                    <a href="tel:+994998310813">
+                        +994 99 831 08 13
+                    </a>
+
+                    <a href="https://instagram.com/aloryamedia.az">
+                        Instagram ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>© <span id="year"></span> ALORYA STUDIO.</p>
+
+                <p>BAKU · AZERBAIJAN</p>
+
+            </div>
+
+        </div>
+
+        <div class="creator-credit">
+            <span>CREATED WITH PASSION BY</span>
+            <h3>Akbar Ali</h3>
+            <p>DESIGN · CREATIVITY · DEVELOPMENT</p>
+        </div>
+
+    </footer>
+
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>

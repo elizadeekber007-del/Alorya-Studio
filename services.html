@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xidmətlər | ALORYA STUDIO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .services-page {
+            background: #090909;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .services-hero {
+            padding: 150px 20px 85px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .9)),
+                url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1800&q=90") center/cover;
+        }
+
+        .services-hero span,
+        .service-category {
+            color: #c9a45c;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .services-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(38px, 6vw, 68px);
+            font-weight: 500;
+            margin: 20px 0;
+        }
+
+        .services-hero p {
+            color: #bbb;
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .services-list {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .service-detail-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .service-detail-card:nth-child(even) .service-image {
+            order: 2;
+        }
+
+        .service-image {
+            height: 390px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .7s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 37px;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+
+        .service-info p {
+            color: #aaa;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .service-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .service-info li {
+            color: #ddd;
+            margin: 13px 0;
+            font-size: 14px;
+        }
+
+        .service-info li::before {
+            content: "✦";
+            color: #c9a45c;
+            margin-right: 12px;
+        }
+
+        .service-booking {
+            display: inline-block;
+            padding: 14px 27px;
+            border: 1px solid #c9a45c;
+            color: #c9a45c;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: 12px;
+            transition: .3s;
+        }
+
+        .service-booking:hover {
+            background: #c9a45c;
+            color: #090909;
+        }
+
+        .services-contact {
+            text-align: center;
+            padding: 75px 20px;
+            background: #111;
+        }
+
+        .services-contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .services-contact p {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        @media(max-width: 768px) {
+            .services-hero {
+                padding: 120px 20px 65px;
+            }
+
+            .service-detail-card {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin-bottom: 65px;
+            }
+
+            .service-detail-card:nth-child(even) .service-image {
+                order: 0;
+            }
+
+            .service-image {
+                height: 280px;
+            }
+
+            .service-info h2 {
+                font-size: 30px;
+            }
+
+            .services-list {
+                padding: 55px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="introAnimation">
+        <div class="camera-animation">
+            <svg viewBox="0 0 100 75" width="100" height="75">
+                <path d="M10 18 H28 L36 7 H65 L73 18 H90 Q96 18 96 25 V65 Q96 70 90 70 H10 Q4 70 4 65 V25 Q4 18 10 18Z"
+                    fill="#c9a66b" />
+                <circle cx="50" cy="44" r="21" fill="#171717" />
+                <circle cx="50" cy="44" r="14" fill="#c9a66b" />
+                <circle cx="50" cy="44" r="8" fill="#171717" />
+                <circle cx="80" cy="27" r="4" fill="#171717" />
+            </svg>
+        </div>
+        <span>ALORYA STUDIO</span>
+    </div>
+
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                ALORYA<span>.</span>
+                <small>PHOTOGRAPHY STUDIO</small>
+            </a>
+
+                <nav class="navbar" id="navbar">
+                    <a href="index.html#home"><b>Ana səhifə</b></a>
+                    <a href="portfolio.html"><b>Portfolio</b></a>
+                    <a href="services.html" class="active"><b>Xidmətlər</b></a>
+                    <a href="index.html#about"><b>Haqqımızda</b></a>
+                    <a href="index.html#contact"><b>Əlaqə</b></a>
+                </nav>
+
+                <a href="booking.html" class="header-btn">Sifariş et</a>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Menyunu aç">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="services-page">
+
+        <section class="services-hero">
+            <span>ALORYA STUDIO</span>
+            <h1>Çəkiliş xidmətlərimiz</h1>
+            <p>
+                Hər anın öz hekayəsi var. Biz isə həmin anları
+                zövqlü və unudulmaz fotolara çeviririk.
+            </p>
+        </section>
+
+        <section class="services-list">
+
+            <article class="service-detail-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1000&q=85"
+                        alt="Ad günü çəkilişi">
+                </div>
+                <div class="service-info">
+                    <span class="service-category">01 / Xüsusi günlər</span>
+                    <h2>Ad günü çəkilişləri</h2>
+                    <p>
+                        Özəl gününüzün sevincini peşəkar fotoqrafiya ilə
+                        əbədiləşdiririk. Fərqli konseptlər, kreativ kadrlar
+                        və unudulmaz xatirələr.
+                    </p>
+                    <ul>
+                        <li>Fərdi ad günü çəkilişləri</li>
+                        <li>Studiya və məkan çəkilişləri</li>
+                        <li>Konseptə uyğun fotoşəkillər</li>
+                    </ul>
+                    <a href="booking.html" class="service-booking">ÇƏKİLİŞ SİFARİŞ ET ↗</a>
+                </div>
+            </article>
+
+            <article class="service-detail-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&q=85"
+                        alt="Nişan çəkilişi">
+                </div>
+                <div class="service-info">
+                    <span class="service-category">02 / Sevgi hekayəsi</span>
+                    <h2>Nişan çəkilişləri</h2>
+                    <p>
+                        Həyatınızın ən gözəl başlanğıclarından birini
+                        xüsusi kadrlarla yadda saxlayın. Hər detalda
+                        sevginizi və xoşbəxtliyinizi əks etdirək.
+                    </p>
+                    <ul>
+                        <li>Nişan mərasimi çəkilişləri</li>
+                        <li>Cütlük fotosessiyaları</li>
+                        <li>Açıq hava və studiya çəkilişləri</li>
+                    </ul>
+                    <a href="booking.html" class="service-booking">ÇƏKİLİŞ SİFARİŞ ET ↗</a>
+                </div>
+            </article>
+
+            <article class="service-detail-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1000&q=85"
+                        alt="Ailə çəkilişi">
+                </div>
+                <div class="service-info">
+                    <span class="service-category">03 / Ailə xatirələri</span>
+                    <h2>Ailə çəkilişləri</h2>
+                    <p>
+                        Birlikdə keçirdiyiniz gözəl anları fotoşəkillərdə
+                        yaşadın. Səmimi, təbii və emosional ailə
+                        kadrları hazırlayırıq.
+                    </p>
+                    <ul>
+                        <li>Ailə fotosessiyaları</li>
+                        <li>Valideyn və uşaq çəkilişləri</li>
+                        <li>Studiya və açıq hava çəkilişləri</li>
+                    </ul>
+                    <a href="booking.html" class="service-booking">ÇƏKİLİŞ SİFARİŞ ET ↗</a>
+                </div>
+            </article>
+
+            <article class="service-detail-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&q=85"
+                        alt="Vinetka çəkilişi">
+                </div>
+                <div class="service-info">
+                    <span class="service-category">04 / Məzun xatirələri</span>
+                    <h2>Vinetka çəkilişləri</h2>
+                    <p>
+                        Məktəb və universitet illərinin ən gözəl
+                        xatirələrini birlikdə yaradaq. Qrup və fərdi
+                        çəkilişlərlə bu illəri yaddaşlarda saxlayaq.
+                    </p>
+                    <ul>
+                        <li>Sinif və qrup çəkilişləri</li>
+                        <li>Fərdi məzun fotosessiyaları</li>
+                        <li>Vinetka üçün fotoşəkillər</li>
+                    </ul>
+                    <a href="booking.html" class="service-booking">ÇƏKİLİŞ SİFARİŞ ET ↗</a>
+                </div>
+            </article>
+
+            <article class="service-detail-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1000&q=85"
+                        alt="Portret çəkilişi">
+                </div>
+                <div class="service-info">
+                    <span class="service-category">05 / Fərdi portret</span>
+                    <h2>Portret çəkilişləri</h2>
+                    <p>
+                        Sizin üslubunuzu və xarakterinizi əks etdirən
+                        fərdi portretlər. Hər kadrda özünəməxsus
+                        atmosfer və peşəkar yanaşma.
+                    </p>
+                    <ul>
+                        <li>Fərdi portret fotosessiyaları</li>
+                        <li>Studiya çəkilişləri</li>
+                        <li>Kreativ foto konseptləri</li>
+                    </ul>
+                    <a href="booking.html" class="service-booking">ÇƏKİLİŞ SİFARİŞ ET ↗</a>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="services-contact">
+            <h2>Gözəl anlarınızı birlikdə yaradaq</h2>
+            <p>Çəkilişinizi planlaşdırmaq üçün bizimlə əlaqə saxlayın.</p>
+            <a href="tel:+994998310813" class="service-booking">İNDİ ƏLAQƏ SAXLA ↗</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="creator-credit">
+            <span>CREATED WITH PASSION BY</span>
+            <h3>Akbar Ali</h3>
+            <p>DESIGN · CREATIVITY · DEVELOPMENT</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

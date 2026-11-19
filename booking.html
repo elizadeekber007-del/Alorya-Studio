@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çəkiliş sifarişi | ALORYA STUDIO</title>
+<!-- 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css"> -->
+
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="booking.css">
+</head>
+<body>
+ <div id="introAnimation">
+        <div class="camera-animation">
+            <svg viewBox="0 0 100 75" width="100" height="75">
+                <path d="M10 18 H28 L36 7 H65 L73 18 H90 Q96 18 96 25 V65 Q96 70 90 70 H10 Q4 70 4 65 V25 Q4 18 10 18Z"
+                    fill="#c9a66b" />
+                <circle cx="50" cy="44" r="21" fill="#171717" />
+                <circle cx="50" cy="44" r="14" fill="#c9a66b" />
+                <circle cx="50" cy="44" r="8" fill="#171717" />
+                <circle cx="80" cy="27" r="4" fill="#171717" />
+            </svg>
+        </div>
+        <span>ALORYA STUDIO</span>
+    </div>
+
+
+    <header class="booking-header">
+        <a href="index.html" class="booking-logo">
+            ALORYA<span>.</span>
+            <small>PHOTOGRAPHY STUDIO</small>
+        </a>
+
+        <a href="index.html" class="back-link">← Ana səhifə</a>
+    </header>
+
+    <main class="booking-page">
+
+        <div class="booking-heading">
+            <span>ALORYA STUDIO</span>
+            <h1>Çəkilişinizi planlaşdırın.</h1>
+            <p>Məlumatlarınızı qeyd edin, sizinlə əlaqə saxlayaq.</p>
+        </div>
+
+        <form id="bookingForm" class="booking-form">
+
+            <div class="form-group">
+                <label>Ad və soyad</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Adınızı və soyadınızı daxil edin"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Əlaqə nömrəniz</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+994 XX XXX XX XX"
+                    required
+                >
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Çəkiliş günü</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Çəkiliş saatı</label>
+                    <input type="time" id="time" required>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label>Çəkiliş növü</label>
+
+                <select id="service" required>
+                    <option value="">Çəkiliş növünü seçin</option>
+                    <option>Doğum günü çəkilişi</option>
+                    <option>Ailə çəkilişi</option>
+                    <option>Love Story</option>
+                    <option>Vinetka çəkilişi</option>
+                    <option>Studio çəkilişi</option>
+                    <option>Digər</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Əlavə qeyd</label>
+                <textarea
+                    id="note"
+                    placeholder="Əlavə istəklərinizi qeyd edə bilərsiniz..."
+                    rows="4"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="whatsapp-btn">
+                WhatsApp ilə sorğu göndər ↗
+            </button>
+
+            <p class="form-note">
+                Sorğunuz WhatsApp vasitəsilə bizə göndəriləcək.
+            </p>
+
+        </form>
+
+    </main>
+
+    <!-- <script src="js/booking.js"></script> -->
+
+    <script src="booking.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
